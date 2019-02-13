@@ -1,7 +1,5 @@
 # attachment_fu Base64 image upload
 This code will help you upload Base64 images with attachment_fu gem without any extra gem.
-# Rails Carrierwave Base64 image upload
-This code will help you upload Base64 images with carrierwave gem without using any extra gem.
 
 
 # Example with one image:
