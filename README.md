@@ -9,7 +9,7 @@ code = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAGX
 REGEXP = /\Adata:([-\w]+\/[-\w\+\.]+)?;base64,(.*)/m
 new_code = code.match(REGEXP) || []
 new_code = new_code[2] if new_code[2].present?
-#Following patch will convert base64 code to a file and upload it using Carrierwave gem. You can loop this patch as well and you can pass dynamic original_filename and content_type attributes.
+#Following patch will convert base64 code to a file and upload it using attachment_fu gem. You can loop this patch as well and you can pass dynamic original_filename and content_type attributes.
 StringIO.open(Base64.decode64(new_code)) do |data|
   data.class.class_eval { attr_accessor :original_filename, :content_type }
   data.original_filename = "TEST.png"
